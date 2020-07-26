@@ -3,7 +3,6 @@ package com.fallener.tutorial;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
@@ -27,7 +26,7 @@ public class ExampleMod implements ModInitializer {
 		new Item.Settings()
 		.group(ExampleMod.ITEM_GROUP)
 		.maxCount(64));
-	public static final Block FABRICA_BLOCK = new Block(FabricBlockSettings.of(Material.METAL).hardness(4.0f));
+	public static final FabricBlock FABRICA_BLOCK = new FabricBlock(FabricBlockSettings.of(Material.METAL).hardness(4.0f));
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
